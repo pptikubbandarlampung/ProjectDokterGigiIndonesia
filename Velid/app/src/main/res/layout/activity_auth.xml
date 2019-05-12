@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.auth.AuthActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+        android:src="@drawable/diagonal_background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlackTrans"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/signin_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="17"
+            android:background="@color/fadeWhite2"
+            android:orientation="horizontal">
+            <app.ciptamedia.royal.ui.VerticalTextView
+                android:id="@+id/signin_invoker_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:paddingTop="15dp"
+                android:text="Signin"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:rotation="180"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:background="@color/colorPrimaryDark"
+                android:fontFamily="@font/nanum_regular"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:visibility="gone"/>
+
+            <include
+                android:id="@+id/signin_content"
+                layout="@layout/layout_signin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/signup_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:rotation="180"
+                android:background="@color/colorPrimaryDark">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:visibility="visible"
+                    android:id="@+id/more_image"
+                    android:adjustViewBounds="true"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="15dp"
+                    android:src="@mipmap/ic_launcher"
+                    />
+                <app.pptik.itb.velid.ui.VerticalTextView
+                    android:id="@+id/signup_invoker_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:rotation="180"
+                    android:paddingTop="15dp"
+                    android:text="Signup"
+                    android:background="@color/colorPrimary"
+                    android:layout_gravity="center"
+                    android:padding="15dp"
+                    android:fontFamily="@font/nanum_regular"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+
+            <include
+                android:id="@+id/signup_content"
+                layout="@layout/layout_signup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/loading_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/colorPrimary"-->
+        <!--android:clickable="true"-->
+        <!--android:visibility="gone">-->
+
+        <!--<fr.castorflex.android.circularprogressbar.CircularProgressBar-->
+            <!--style="@style/CircularThemeProgressBar"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:clickable="false" />-->
+    <!--</RelativeLayout>-->
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="permission_dialog">Accessing Location Permissions required</string>
+    <string name="go_to_permissions_settings">Go to App settings and enable permissions</string>
+    <string name="in">Sign In</string>
+    <string name="up">Sign Up</string>
+    <string name="out">Sign Out</string>
+    <string name="not_acc">Belum punya akun? Daftar sekarang!</string>
+    <string name="have_acc">Sudah terdaftar? Silahkan masuk!</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+    <string name="close">Close</string>
+    <string name="exit">Exit</string>
+
+    <string name="mail">Username</string>
+    <string name="pass">Password</string>
+    <string name="name">Nama Lengkap</string>
+    <string name="email">Email</string>
+    <string name="telp">No. Telephone/Whatsapp</string>
+    <string name="spesialis">No.KTA/NPA</string>
+    <string name="str">No.STR</string>
+    <string name="npm">No.NPM</string>
+    <string name="addrs">Alamat Rumah</string>
+    <string name="addrss">Alamat Korespondensi</string>
+    <string name="idktp">No.KTP</string>
+    <string name="namaapp">Vellid</string>
+
+
+    <string name="list">Daftar Acara</string>
+    <string name="cost">IDR REGULER</string>
+    <string name="user">PARTICIPANT</string>
+
+    <string name="list_a">D enjoy your restoration 2019</string>
+    <string name="list_b">Minggu, 14 April 2014</string>
+    <string name="list_c">Hotel grand kemang, Jakarta</string>
+    <string name="list_d">500,000</string>
+    <string name="list_e">200000</string>
+    <string name="list_f">Drg. Handoko Brimajaya</string>
+
+
+    <string name="kec">Labuhan Ratu</string>
+    <string name="kab">Bandar Lampung</string>
+    <string name="status">Pilih Profesi</string>
+
+    <string name="dokter">Dokter</string>
+    <string name="mahasiswa">Mahasiswa</string>
+    <string name="jk">Jenis Kelamin</string>
+
+    <string name="lk">Laki-laki</string>
+    <string name="pr">Perempuan</string>
+
+    <string name="ttl">Tanggal Lahir</string>
+    <string name="usr">username</string>
+    <string name="spinner_title">pilih item</string>
+    <string name="title_activity_menuprofil">menuprofil</string>
+
+</resources>

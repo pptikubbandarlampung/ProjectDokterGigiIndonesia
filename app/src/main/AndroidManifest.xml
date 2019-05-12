@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="lab_iot_ubl.aseptrisnasetiawan.appvellidcom">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/doctor"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/doctor"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".features.RegisterGambarDokter"></activity>
+        <activity android:name=".features.RegisterGambarMahasiswa" />
+        <activity android:name=".features.Menu_detail" />
+        <activity android:name=".Menu_Transaksi" />
+        <activity android:name=".features.Menu_UserProfil" />
+        <activity android:name=".features.Menu_Dassboard" />
+        <activity android:name=".features.auth.AuthActivity" />
+        <activity android:name=".features.Splas_Screen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

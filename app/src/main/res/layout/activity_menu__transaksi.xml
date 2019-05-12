@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="30dp"
+        tools:context=".f">
+
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/profil"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="3dp"
+                android:src="@drawable/doctor" />
+
+            <TextView
+                android:layout_width="240dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="0dp"
+                android:text="VELLID DAFTAR"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <ImageButton
+                android:id="@+id/backk"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_arrow_back_black_24dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Harga Seminar"
+            android:id="@+id/edt_name"
+            android:inputType="text"
+            android:autoLink="web"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipe Harga Seminar"
+            android:textSize="20dp"
+            android:layout_marginLeft="80dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/regulerharga"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:text="Reguler"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/hargareguler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harga"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/earliharga"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:text="EARLY BIRD"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/hargaealy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harga"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/lateharga"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:text="LATE"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/hargalate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harga"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/colorPrimary"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/handon1"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="Handon1"
+                android:textSize="15sp"
+                android:layout_marginLeft="80dp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/handonsatu"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="14dp"
+                android:text="Reguler"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/handontekssatu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harga"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/handon2"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:text="Early Bird"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/tekshandon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harga"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/handon3"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:text="Late"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/tekshandon3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harga"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/colorPrimary"/>
+
+
+        <Button
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tombol1"
+            android:text="PROSES"
+            android:background="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="8dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="120dp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="Judul Seminar"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:id="@+id/jdl_seminar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:autoLink="web"
+                android:text="Judul Seminar" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="120dp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="Nama "
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:id="@+id/nama_lengkap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:autoLink="web"
+                android:text="Asep Trisna setiawan" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="120dp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="Total Bayar"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:id="@+id/totalbayar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Rp.1000.000" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="120dp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="No.Rek"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:id="@+id/No.Rekening"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="16018181615" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tombol2"
+                android:text="     RESET DATA"
+                android:background="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textColor="#ffffFF"/>
+            <Button
+                android:layout_width="200dp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tombol3"
+                android:text="BAYAR        "
+                android:background="@color/colorPrimary"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

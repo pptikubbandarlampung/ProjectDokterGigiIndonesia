@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/myauth"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/colorPrimary"
+    tools:context=".features.auth.AuthActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/diagonal_background"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/signin_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="18"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="horizontal">
+            <lab_iot_ubl.aseptrisnasetiawan.appvellidcom.ui.VerticalTextView
+                android:id="@+id/signin_invoker_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:paddingTop="15dp"
+                android:text="Signin"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:rotation="180"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:background="@color/black"
+                android:fontFamily="@font/nanum_regular"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:visibility="gone"/>
+
+            <include
+                android:id="@+id/signin_content"
+                layout="@layout/layout_signin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/signup_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="#2abb9b"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:rotation="180"
+                android:background="@color/colorPrimaryDark">
+                <lab_iot_ubl.aseptrisnasetiawan.appvellidcom.ui.VerticalTextView
+                    android:id="@+id/signup_invoker_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:rotation="180"
+                    android:paddingTop="15dp"
+                    android:text="Signup"
+                    android:background="@color/black"
+                    android:layout_gravity="center"
+                    android:padding="15dp"
+                    android:fontFamily="@font/nanum_regular"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    android:visibility="visible" />
+                <!--<ImageView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:visibility="visible"-->
+                    <!--android:id="@+id/more_image"-->
+                    <!--android:adjustViewBounds="true"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:paddingBottom="15dp"-->
+                    <!--android:src="@drawable/doctor" />-->
+
+            </LinearLayout>
+
+
+            <include
+                android:id="@+id/signup_content"
+                layout="@layout/layout_signup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
