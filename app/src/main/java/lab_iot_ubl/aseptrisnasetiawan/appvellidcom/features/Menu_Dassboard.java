@@ -1,9 +1,16 @@
 package lab_iot_ubl.aseptrisnasetiawan.appvellidcom.features;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Message;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -22,6 +29,7 @@ import lab_iot_ubl.aseptrisnasetiawan.appvellidcom.features.AdapterEvent;
 import lab_iot_ubl.aseptrisnasetiawan.appvellidcom.features.auth.AuthActivity;
 import lab_iot_ubl.aseptrisnasetiawan.appvellidcom.features.auth.SharedPrefManager;
 import lab_iot_ubl.aseptrisnasetiawan.appvellidcom.network.ApiService;
+import lab_iot_ubl.aseptrisnasetiawan.appvellidcom.network.GlobalVariable;
 import lab_iot_ubl.aseptrisnasetiawan.appvellidcom.network.InitRetrofit;
 import lab_iot_ubl.aseptrisnasetiawan.appvellidcom.Models.EventItem;
 import lab_iot_ubl.aseptrisnasetiawan.appvellidcom.Models.ResponseEvent;
@@ -30,6 +38,7 @@ import lab_iot_ubl.aseptrisnasetiawan.appvellidcom.Models.User;
 
 import java.util.List;
 
+import lab_iot_ubl.aseptrisnasetiawan.appvellidcom.network.RMQ;
 import lab_iot_ubl.aseptrisnasetiawan.appvellidcom.ui.TopSnakbar;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -39,11 +48,12 @@ import retrofit2.Response;
 
 
 public class Menu_Dassboard extends AppCompatActivity {
-//    RMQ rmq = new RMQ();
+    GlobalVariable gb = new GlobalVariable();
+    RMQ rmq = new RMQ();
+    private Thread subscribeThread;
     ImageView profil;
 
     private RecyclerView recyclerView;
-
     LinearLayout one, two;
     Animation uptodown, downtoup;
     private CoordinatorLayout coordinatorLayout;
@@ -51,13 +61,15 @@ public class Menu_Dassboard extends AppCompatActivity {
     ImageButton notif,logout;
     boolean doubleBackToExitPressedOnce = false;
     //@BindView(R.id.progress_bar) ProgressBar progressBar;
-    Thread subscribeThread ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu__dassboard);
 //       subscribeThread = new Thread();
+        rmq.setupConnectionFactory();
+//        subscribeNotification();
 
 
         User user= SharedPrefManager.getInstance(this).getUser();
@@ -92,13 +104,13 @@ public class Menu_Dassboard extends AppCompatActivity {
 
 //
 
-//        notif = findViewById(R.id.notifyBtn);
-//        notif.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                toNotif();
-//            }
-//        });
+        notif = findViewById(R.id.notifyBtn);
+        notif.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toNotif();
+            }
+        });
 
 
         logout=findViewById(R.id.logout);
@@ -137,12 +149,12 @@ public class Menu_Dassboard extends AppCompatActivity {
     }
 
 
-//    public void toNotif(){
-//        Intent sign = new Intent(this, Notify.class);
-//        startActivity(sign);
-//        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-//        finish();
-//    }
+    public void toNotif(){
+        Intent sign = new Intent(this, Menu_DetailDaftafEvent.class);
+        startActivity(sign);
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        finish();
+    }
 
     @Override
     public void onBackPressed() {
@@ -201,27 +213,7 @@ public class Menu_Dassboard extends AppCompatActivity {
     }
 
 
-
-//    private void subscribeNotification() {
-//        final Handler incomingMessageHandler = new Handler() {
-//            @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
-//            @Override
-//            public void handleMessage(Message msg) {
-//                String title = "Seminar Baru";
-//                String message = msg.getData().getString("msg");
-//                Log.d("RMQMessage", message);
-//
-//                showNotification(title, message);
-////                Toast.makeText(MainActivity.this,title,Toast.LENGTH_LONG).show();
-//            }
-//        };
-//
-//        //ini gua coba iseng kak
-//        rmq.subscribe(incomingMessageHandler,subscribeThread);
-//    }
-//
-//    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
-//    public void showNotification(String title, String body) {
+//    public void showNotification( String title, String body) {
 //        Context context = getApplicationContext();
 //        Intent intent = getIntent();
 //
@@ -251,5 +243,18 @@ public class Menu_Dassboard extends AppCompatActivity {
 //        mBuilder.setContentIntent(resultPendingIntent);
 //
 //        notificationManager.notify(notificationId, mBuilder.build());
+//    }
+//    private void subscribeNotification() {
+//        final Handler incomingMessageHandler = new Handler() {
+//            @Override
+//            public void handleMessage(Message msg) {
+//                String title = "Seminar Baru";
+//                String message = msg.getData().getString("msg");
+//                Log.d("RMQMessage", message);
+//
+//                showNotification(title, message);
+//            }
+//        };
+//        rmq.subscribeNotification(incomingMessageHandler,subscribeThread);
 //    }
 }
